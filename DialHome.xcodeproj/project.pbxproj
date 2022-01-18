@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49944BC727976EE4008FFA32 /* DialHomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialHomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49944BC727976EE4008FFA32 /* DialHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49944BCA27976EE4008FFA32 /* DialHomeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialHomeAppApp.swift; sourceTree = "<group>"; };
 		49944BCC27976EE4008FFA32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49944BCE27976EE5008FFA32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		49944BC827976EE4008FFA32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49944BC727976EE4008FFA32 /* DialHomeApp.app */,
+				49944BC727976EE4008FFA32 /* DialHome.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49944BC627976EE4008FFA32 /* DialHomeApp */ = {
+		49944BC627976EE4008FFA32 /* DialHome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49944BDA27976EE5008FFA32 /* Build configuration list for PBXNativeTarget "DialHomeApp" */;
+			buildConfigurationList = 49944BDA27976EE5008FFA32 /* Build configuration list for PBXNativeTarget "DialHome" */;
 			buildPhases = (
 				49944BC327976EE4008FFA32 /* Sources */,
 				49944BC427976EE4008FFA32 /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = DialHomeApp;
+			name = DialHome;
 			productName = DialHomeApp;
-			productReference = 49944BC727976EE4008FFA32 /* DialHomeApp.app */;
+			productReference = 49944BC727976EE4008FFA32 /* DialHome.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 49944BC227976EE4008FFA32 /* Build configuration list for PBXProject "DialHomeApp" */;
+			buildConfigurationList = 49944BC227976EE4008FFA32 /* Build configuration list for PBXProject "DialHome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49944BC627976EE4008FFA32 /* DialHomeApp */,
+				49944BC627976EE4008FFA32 /* DialHome */,
 			);
 		};
 /* End PBXProject section */
@@ -290,8 +290,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Andrew.DialHomeApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.DialHome;
+				PRODUCT_NAME = DialHome;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,8 +319,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Andrew.DialHomeApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.DialHome;
+				PRODUCT_NAME = DialHome;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49944BC227976EE4008FFA32 /* Build configuration list for PBXProject "DialHomeApp" */ = {
+		49944BC227976EE4008FFA32 /* Build configuration list for PBXProject "DialHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49944BD827976EE5008FFA32 /* Debug */,
@@ -339,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49944BDA27976EE5008FFA32 /* Build configuration list for PBXNativeTarget "DialHomeApp" */ = {
+		49944BDA27976EE5008FFA32 /* Build configuration list for PBXNativeTarget "DialHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49944BDB27976EE5008FFA32 /* Debug */,

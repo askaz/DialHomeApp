@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct DialHomeAppApp: App {
+struct DialHomeApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
