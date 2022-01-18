@@ -17,7 +17,7 @@ struct ContentView: View {
             //PegJumperDHD().environmentObject(Dialing())
             //AtlantisDHD().environmentObject(Dialing())
             //iPhoneDHD().environmentObject(Dialing())
-            iPhoneDHD_MW()
+            iPhoneDHD_MW().environmentObject(Dialing())
              .tabItem {
                 Image(systemName: "phone.fill")
                 Text("DHD")
