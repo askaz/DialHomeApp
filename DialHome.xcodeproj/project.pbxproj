@@ -7,22 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49944BCB27976EE4008FFA32 /* DialHomeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BCA27976EE4008FFA32 /* DialHomeAppApp.swift */; };
+		49944BCB27976EE4008FFA32 /* DialHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BCA27976EE4008FFA32 /* DialHomeApp.swift */; };
 		49944BCD27976EE4008FFA32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BCC27976EE4008FFA32 /* ContentView.swift */; };
 		49944BCF27976EE5008FFA32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49944BCE27976EE5008FFA32 /* Assets.xcassets */; };
 		49944BD227976EE5008FFA32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49944BD127976EE5008FFA32 /* Preview Assets.xcassets */; };
 		49944BD427976EE5008FFA32 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BD327976EE5008FFA32 /* Persistence.swift */; };
 		49944BD727976EE5008FFA32 /* DialHomeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49944BD527976EE5008FFA32 /* DialHomeApp.xcdatamodeld */; };
+		49944BE3279771EB008FFA32 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BDD279771EA008FFA32 /* Glyph.swift */; };
+		49944BE4279771EB008FFA32 /* Database in Resources */ = {isa = PBXBuildFile; fileRef = 49944BDE279771EA008FFA32 /* Database */; };
+		49944BE5279771EB008FFA32 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BDF279771EA008FFA32 /* Address.swift */; };
+		49944BE6279771EB008FFA32 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 49944BE0279771EB008FFA32 /* Fonts */; };
+		49944BE7279771EB008FFA32 /* iPhoneDHD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BE1279771EB008FFA32 /* iPhoneDHD.swift */; };
+		49944BE8279771EB008FFA32 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BE2279771EB008FFA32 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49944BC727976EE4008FFA32 /* DialHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		49944BCA27976EE4008FFA32 /* DialHomeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialHomeAppApp.swift; sourceTree = "<group>"; };
+		49944BCA27976EE4008FFA32 /* DialHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialHomeApp.swift; sourceTree = "<group>"; };
 		49944BCC27976EE4008FFA32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49944BCE27976EE5008FFA32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49944BD127976EE5008FFA32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49944BD327976EE5008FFA32 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		49944BD627976EE5008FFA32 /* DialHomeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DialHomeApp.xcdatamodel; sourceTree = "<group>"; };
+		49944BDD279771EA008FFA32 /* Glyph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
+		49944BDE279771EA008FFA32 /* Database */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Database; sourceTree = "<group>"; };
+		49944BDF279771EA008FFA32 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		49944BE0279771EB008FFA32 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		49944BE1279771EB008FFA32 /* iPhoneDHD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPhoneDHD.swift; sourceTree = "<group>"; };
+		49944BE2279771EB008FFA32 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +67,14 @@
 		49944BC927976EE4008FFA32 /* DialHomeApp */ = {
 			isa = PBXGroup;
 			children = (
-				49944BCA27976EE4008FFA32 /* DialHomeAppApp.swift */,
+				49944BCA27976EE4008FFA32 /* DialHomeApp.swift */,
 				49944BCC27976EE4008FFA32 /* ContentView.swift */,
+				49944BDF279771EA008FFA32 /* Address.swift */,
+				49944BDE279771EA008FFA32 /* Database */,
+				49944BE0279771EB008FFA32 /* Fonts */,
+				49944BDD279771EA008FFA32 /* Glyph.swift */,
+				49944BE1279771EB008FFA32 /* iPhoneDHD.swift */,
+				49944BE2279771EB008FFA32 /* SettingsView.swift */,
 				49944BCE27976EE5008FFA32 /* Assets.xcassets */,
 				49944BD327976EE5008FFA32 /* Persistence.swift */,
 				49944BD527976EE5008FFA32 /* DialHomeApp.xcdatamodeld */,
@@ -133,6 +151,8 @@
 			files = (
 				49944BD227976EE5008FFA32 /* Preview Assets.xcassets in Resources */,
 				49944BCF27976EE5008FFA32 /* Assets.xcassets in Resources */,
+				49944BE4279771EB008FFA32 /* Database in Resources */,
+				49944BE6279771EB008FFA32 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,10 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49944BE5279771EB008FFA32 /* Address.swift in Sources */,
+				49944BE8279771EB008FFA32 /* SettingsView.swift in Sources */,
 				49944BD727976EE5008FFA32 /* DialHomeApp.xcdatamodeld in Sources */,
 				49944BD427976EE5008FFA32 /* Persistence.swift in Sources */,
 				49944BCD27976EE4008FFA32 /* ContentView.swift in Sources */,
-				49944BCB27976EE4008FFA32 /* DialHomeAppApp.swift in Sources */,
+				49944BE7279771EB008FFA32 /* iPhoneDHD.swift in Sources */,
+				49944BE3279771EB008FFA32 /* Glyph.swift in Sources */,
+				49944BCB27976EE4008FFA32 /* DialHomeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
