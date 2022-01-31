@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49069F3827A786DC001DA6F6 /* Destiny_DHD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49069F3727A786DC001DA6F6 /* Destiny_DHD.swift */; };
 		49944BCB27976EE4008FFA32 /* DialHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BCA27976EE4008FFA32 /* DialHomeApp.swift */; };
 		49944BCD27976EE4008FFA32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BCC27976EE4008FFA32 /* ContentView.swift */; };
 		49944BCF27976EE5008FFA32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49944BCE27976EE5008FFA32 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49069F3727A786DC001DA6F6 /* Destiny_DHD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destiny_DHD.swift; sourceTree = "<group>"; };
 		49944BC727976EE4008FFA32 /* DialHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49944BCA27976EE4008FFA32 /* DialHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialHomeApp.swift; sourceTree = "<group>"; };
 		49944BCC27976EE4008FFA32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				49944BCC27976EE4008FFA32 /* ContentView.swift */,
 				49944BF1279773BB008FFA32 /* press.mp3 */,
 				49944BEB279772F8008FFA32 /* iPhoneDHD_MW.swift */,
+				49069F3727A786DC001DA6F6 /* Destiny_DHD.swift */,
 				49944BDF279771EA008FFA32 /* Address.swift */,
 				49944BF52797755E008FFA32 /* Database Views */,
 				49944BE0279771EB008FFA32 /* Fonts */,
@@ -193,6 +196,7 @@
 				49944BE7279771EB008FFA32 /* iPhoneDHD.swift in Sources */,
 				49944BE3279771EB008FFA32 /* Glyph.swift in Sources */,
 				49944BCB27976EE4008FFA32 /* DialHomeApp.swift in Sources */,
+				49069F3827A786DC001DA6F6 /* Destiny_DHD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,11 @@ struct ContentView: View {
                 Image(systemName: "phone.fill")
                 Text("DHD")
               }
+            Destiny_DHD().tabItem {
+                Image(systemName: "phone.fill")
+                Text("DHD")
+              }
+            
             SettingsView().environmentObject(Dialing())
                 .tabItem{
                 Image(systemName: "gearshape")
@@ -67,25 +72,16 @@ struct DHD_Button_MW: View {
             print(numberOfTrue)
             }
         }) {
-            if dial.pressed_symbols[num-1] {
-                Text(gl.translate(number: num, gate: galaxy)).font(Font.custom(font_version, size: CGFloat(font_size))).foregroundColor(textOn).offset(x: CGFloat(x_shift),y:CGFloat(y_shift))
-                    .frame(width: CGFloat(frame_width*2), height:CGFloat(frame_height))
-                .background(
-                    FlatTriangle().fill(buttonOff)
-                        .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                        .rotationEffect(.degrees(rot))
-                )
-            } // If False
-            else {
-                Text(gl.translate(number: num, gate: galaxy)).font(Font.custom(font_version, size: CGFloat(font_size))).foregroundColor(textOff).offset(x: CGFloat(x_shift),y:CGFloat(y_shift))
-                    .frame(width: CGFloat(frame_width*2), height:CGFloat(frame_height))
-                .background(
-                    FlatTriangle().fill(buttonOff)
-                        .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                        .rotationEffect(.degrees(rot))
+            Text(gl.translate(number: num, gate: galaxy)).font(Font.custom(font_version, size: CGFloat(font_size)))
+                .foregroundColor(dial.pressed_symbols[num-1] ? textOn : textOff)
+                .offset(x: CGFloat(x_shift),y:CGFloat(y_shift))
+                .frame(width: CGFloat(frame_width*2), height:CGFloat(frame_height))
+                .background(FlatTriangle().fill(buttonOff)
+                .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
+                .rotationEffect(.degrees(rot))
                 )
             }
-    }   .frame(width: CGFloat(frame_width), height:CGFloat(frame_height))
+            .frame(width: CGFloat(frame_width), height:CGFloat(frame_height))
     } //DHD_Button Body
     func findOrient(rotated: String) -> (Double, Double, Double){
         var rot: Double
