@@ -16,8 +16,8 @@ struct ContentView: View {
               }
             //PegJumperDHD().environmentObject(Dialing())
             //AtlantisDHD().environmentObject(Dialing())
-            //iPhoneDHD().environmentObject(Dialing())
-            iPhoneDHD_MW().environmentObject(Dialing())
+            iPhoneDHD().environmentObject(Dialing())
+            //iPhoneDHD_MW().environmentObject(Dialing())
              .tabItem {
                 Image(systemName: "phone.fill")
                 Text("DHD")
@@ -72,7 +72,8 @@ struct DHD_Button_MW: View {
             print(numberOfTrue)
             }
         }) {
-            Text(gl.translate(number: num, gate: galaxy)).font(Font.custom(font_version, size: CGFloat(font_size)))
+            Text(gl.translate(number: num, gate: galaxy))
+                .font(Font.custom(font_version, size: CGFloat(font_size)))
                 .foregroundColor(dial.pressed_symbols[num-1] ? textOn : textOff)
                 .offset(x: CGFloat(x_shift),y:CGFloat(y_shift))
                 .frame(width: CGFloat(frame_width*2), height:CGFloat(frame_height))
@@ -146,24 +147,16 @@ struct DHD_Button: View {
             print(numberOfTrue)
             }
         }) {
-            if dial.pressed_symbols[num-1] {
-                Text("\n"+gl.translate(number: num, gate: galaxy)).font(Font.custom(font_version, size: CGFloat(font_size))).foregroundColor(textOn).offset(x: CGFloat(x_shift),y:CGFloat(y_shift))
-                    .frame(width: CGFloat(frame_width*2), height:CGFloat(frame_height))
-                .background(
-                    FlatTriangle().fill(buttonOff)
-                        .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                        .rotationEffect(.degrees(rot))
-                )
-            } // If False
-            else {
-                Text("\n"+gl.translate(number: num, gate: galaxy)).font(Font.custom(font_version, size: CGFloat(font_size))).foregroundColor(textOff).offset(x: CGFloat(x_shift),y:CGFloat(y_shift))
-                    .frame(width: CGFloat(frame_width*2), height:CGFloat(frame_height))
-                .background(
-                    FlatTriangle().fill(buttonOff)
-                        .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                        .rotationEffect(.degrees(rot))
-                )
-            }
+            Text("\n"+gl.translate(number: num, gate: galaxy))
+                .font(Font.custom(font_version, size: CGFloat(font_size)))
+                .foregroundColor(dial.pressed_symbols[num-1] ? textOn : textOff)
+                .offset(x: CGFloat(x_shift),y:CGFloat(y_shift))
+                .frame(width: CGFloat(frame_width*2), height:CGFloat(frame_height))
+            .background(
+                FlatTriangle().fill(buttonOff)
+                    .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
+                    .rotationEffect(.degrees(rot))
+            )
     }   .frame(width: CGFloat(frame_width), height:CGFloat(frame_height))
     } //DHD_Button Body
     func findOrient(rotated: String) -> (Double, Double, Double){
@@ -233,53 +226,27 @@ struct DHD_Center_Button: View {
                 print(dial.address)
             }
         }) {
-            if dial.pressed_symbols[num-1] {
-                Text(" ")
-                .background(
-                    FlatTriangle().fill(buttonOff)
-                        .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
+            Text(" ")
+            .background(
+                FlatTriangle().fill(buttonOff)
+                    .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
+                    .rotationEffect(.degrees(Double(0)))
+            ).overlay(Triangle().stroke(dial.pressed_symbols[num-1] ? textOn : textOff, lineWidth: 4)
+                        .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
                         .rotationEffect(.degrees(Double(0)))
-                ).overlay(Triangle().stroke(textOn, lineWidth: 4)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(0)))
-                            .offset(y:-15))
-                .overlay(Triangle().stroke(textOn, lineWidth: 4)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(0)))
-                            .offset(x:20,y:20))
-                .overlay(Triangle().stroke(textOn, lineWidth: 4)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(0)))
-                            .offset(x:-20,y:20))
-                .overlay(Triangle().fill(textOn)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(180)))
-                            .offset(x:0,y:15))
-            }
-            else{
-                Text(" ")
-                .background(
-                    FlatTriangle().fill(buttonOff)
-                        .frame(width: CGFloat(Double(t_size)), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
+                        .offset(y:-15))
+            .overlay(Triangle().stroke(dial.pressed_symbols[num-1] ? textOn : textOff, lineWidth: 4)
+                        .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
                         .rotationEffect(.degrees(Double(0)))
-                ).overlay(Triangle().stroke(textOff, lineWidth: 4)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(0)))
-                            .offset(y:-15))
-                .overlay(Triangle().stroke(textOff, lineWidth: 4)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(0)))
-                            .offset(x:20,y:20))
-                .overlay(Triangle().stroke(textOff, lineWidth: 4)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(0)))
-                            .offset(x:-20,y:20))
-                .overlay(Triangle().fill(textOff)
-                            .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
-                            .rotationEffect(.degrees(Double(180)))
-                            .offset(x:0,y:15))
-                
-            }
+                        .offset(x:20,y:20))
+            .overlay(Triangle().stroke(dial.pressed_symbols[num-1] ? textOn : textOff, lineWidth: 4)
+                        .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
+                        .rotationEffect(.degrees(Double(0)))
+                        .offset(x:-20,y:20))
+            .overlay(Triangle().fill(dial.pressed_symbols[num-1] ? textOn : textOff)
+                        .frame(width: CGFloat(Double(t_size/3)), height: CGFloat((Double(t_size/3)*(sqrt(3))/2)))
+                        .rotationEffect(.degrees(Double(180)))
+                        .offset(x:0,y:15))
     }   .frame(width: CGFloat(frame_width), height:CGFloat(frame_height))
     } //DHD_Center_Button Body
 } // DHD_Center_Button View
@@ -329,22 +296,12 @@ struct Jumper_Button: View {
                 dial.active = true
             }
         }) {
-            if dial.pressed_symbols[num-1]  {
-                ZStack{
-                    JumperButton().fill(buttonOff).frame(width: CGFloat(Double(t_size)*1.5), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                    JumperButtonLine().stroke(textOn,lineWidth: 4).frame(width: CGFloat(Double(t_size)*1.5), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                    JumperButton().stroke(buttonOff, lineWidth: 10).cornerRadius(2).frame(width: CGFloat(Double(t_size)*1.65), height: CGFloat((Double(t_size)*0.9526)))
-                Text("")
-                } //ZStack
-            } //If
-            else{
-                ZStack{
-                    JumperButton().fill(buttonOff).frame(width: CGFloat(Double(t_size)*1.5), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                    JumperButtonLine().stroke(textOff,lineWidth: 4).frame(width: CGFloat(Double(t_size)*1.5), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
-                    JumperButton().stroke(buttonOff, lineWidth: 10).cornerRadius(2).frame(width: CGFloat(Double(t_size)*1.65), height: CGFloat((Double(t_size)*0.9526)))
-                Text("")
-                } //ZStack
-            } //Else
+            ZStack{
+                JumperButton().fill(buttonOff).frame(width: CGFloat(Double(t_size)*1.5), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
+                JumperButtonLine().stroke(dial.pressed_symbols[num-1] ? textOn : textOff,lineWidth: 4).frame(width: CGFloat(Double(t_size)*1.5), height: CGFloat((Double(t_size)*(sqrt(3))/2)))
+                JumperButton().stroke(buttonOff, lineWidth: 10).cornerRadius(2).frame(width: CGFloat(Double(t_size)*1.65), height: CGFloat((Double(t_size)*0.9526)))
+            Text("")
+            } //ZStack
         }.frame(width: CGFloat(frame_width*3), height:CGFloat(frame_height))
     } //Jumper_Button Body
 } // Jumper_Button View
