@@ -6,15 +6,14 @@
 //
 
 import SwiftUI
-struct IdentifiableGameResult: Identifiable {
-    var id = UUID()
-    var score: Int
-}
 
 struct Destiny_DHD: View {
     @State var nearby_addresses = [String]()
+    let gl = Glyph()
     //@State private var buttonTapped = false
-    let destiny_glyphs = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","9","8","7","6","5","4","3","2","1","0"]
+    let destiny_glyphs =
+    Array(1...36)
+    //["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","9","8","7","6","5","4","3","2","1","0"]
     
     var body: some View {
         VStack {
@@ -33,14 +32,19 @@ struct Destiny_DHD: View {
         }
  //VStack
     }// Body
-    func generateAddresses(minNum: Int,maxNum: Int, glyphs: [String]) -> ([String]){
+    func generateAddresses(minNum: Int,maxNum: Int, glyphs: [Int]) -> ([String]){
         var Addresses = [String]()
         let num_addresses = Int.random(in: minNum..<maxNum)
-        print(num_addresses)
+        //print(num_addresses)
         for _ in 1...num_addresses {
             let shuffled_glyphs = glyphs.shuffled()
             let slice = shuffled_glyphs.prefix(7)
-            let new_addr = slice.joined(separator: " ")
+            var new_addr = " "
+            for g in slice{
+                new_addr.append(gl.translate(number: g, gate: "Destiny"))
+                new_addr.append(" ")
+            }
+            //let new_addr = slice.joined(separator: " ")
             Addresses.append(new_addr)
         }
         return (Addresses)
