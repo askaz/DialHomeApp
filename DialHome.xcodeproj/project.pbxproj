@@ -23,6 +23,7 @@
 		49944BF02797730D008FFA32 /* Destiny_Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BEF2797730D008FFA32 /* Destiny_Database.swift */; };
 		49944BF2279773BB008FFA32 /* press.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49944BF1279773BB008FFA32 /* press.mp3 */; };
 		49944BF427977550008FFA32 /* MilkyWay_Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944BF327977550008FFA32 /* MilkyWay_Database.swift */; };
+		49CF854327B07F4900AD38E7 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF854227B07F4900AD38E7 /* BLEManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		49944BF1279773BB008FFA32 /* press.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = press.mp3; sourceTree = "<group>"; };
 		49944BF327977550008FFA32 /* MilkyWay_Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkyWay_Database.swift; sourceTree = "<group>"; };
 		49944BF6279775B1008FFA32 /* DialHome-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DialHome-Info.plist"; sourceTree = "<group>"; };
+		49CF854227B07F4900AD38E7 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				49944BCA27976EE4008FFA32 /* DialHomeApp.swift */,
 				49944BCC27976EE4008FFA32 /* ContentView.swift */,
 				49944BF1279773BB008FFA32 /* press.mp3 */,
+				49CF854227B07F4900AD38E7 /* BLEManager.swift */,
 				49944BEB279772F8008FFA32 /* iPhoneDHD_MW.swift */,
 				49069F3727A786DC001DA6F6 /* Destiny_DHD.swift */,
 				49944BDF279771EA008FFA32 /* Address.swift */,
@@ -190,6 +193,7 @@
 				49944BF427977550008FFA32 /* MilkyWay_Database.swift in Sources */,
 				49944BEC279772F8008FFA32 /* iPhoneDHD_MW.swift in Sources */,
 				49944BE8279771EB008FFA32 /* SettingsView.swift in Sources */,
+				49CF854327B07F4900AD38E7 /* BLEManager.swift in Sources */,
 				49944BD727976EE5008FFA32 /* DialHomeApp.xcdatamodeld in Sources */,
 				49944BCD27976EE4008FFA32 /* ContentView.swift in Sources */,
 				49944BEE27977308008FFA32 /* Pegasus_Database.swift in Sources */,

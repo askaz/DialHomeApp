@@ -11,6 +11,8 @@ struct iPhoneDHD: View {
     var compress_ver = 25
     var compress_hor = 2.5
     var body: some View {
+        ZStack{
+            Color.brown.ignoresSafeArea() // 1
         VStack{
             HStack{
                 VStack{
@@ -99,7 +101,8 @@ struct iPhoneDHD: View {
             //Jumper_Button(num: 40, rotate: "None").offset(y:CGFloat(-3*compress_ver))
         }//VStack
     }
-}
+    } //Body
+} //View
 
 struct iPhoneDHD_Previews: PreviewProvider {
     static var previews: some View {
