@@ -7,7 +7,12 @@
 
 import SwiftUI
 
+extension Color {
+  static let textColor = Color("TextColor")
+}
+
 struct Destiny_DHD: View {
+    @EnvironmentObject var dial: Dialing
     @State var nearby_addresses = [String]()
     let gl = Glyph()
     //@State private var buttonTapped = false
@@ -17,13 +22,15 @@ struct Destiny_DHD: View {
     
     var body: some View {
         VStack {
-            Text("Nearby Addresses")
+            Text("Nearby Addresses").foregroundColor(.textColor)
             ForEach(nearby_addresses, id:\.self) { address in
                 Button(action: {
                     print(address.replacingOccurrences(of: " ", with: ""))
+                    print(gl.addr2nums(address: address.replacingOccurrences(of: " ", with: ""), gate: "Destiny"))
+                    
                     //AutoDial
                 }){
-                Text(address)
+                Text(address).foregroundColor(.textColor)
                 }.buttonStyle(Destiny_DHD_ButtonStyle(buttonTapped: true))
             }
         
@@ -58,7 +65,7 @@ struct Destiny_DHD_ButtonStyle : ButtonStyle {
         if buttonTapped == true{
             configuration.label
                 .font(Font.custom("Stargate Universe", size: 36))
-                .foregroundColor(Color.black)
+                .foregroundColor(.textColor)
                 .padding(8)
                 .background(RoundedRectangle(cornerRadius: 10)
                                 .stroke(configuration.isPressed

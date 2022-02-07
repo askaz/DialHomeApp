@@ -52,6 +52,9 @@ class Glyph: NSObject {
         else if gate == "Old Pegasus"{
             glyph_array = pegasusV1
         }
+        else if gate == "Old Destiny"{
+            glyph_array = destinyV1
+        }
         else if gate == "Destiny"{
             glyph_array = destinyV2
         }
@@ -59,10 +62,10 @@ class Glyph: NSObject {
         //let addr_chars = Array(address)
         
         for g in address {
-            let idx = glyph_array.firstIndex(where: { $0 == String(g) })
-            //glyph_nums.append(Int(idx)+1)
+            let idx = glyph_array.firstIndex(of: String(g)) ?? 0
+            //let idx = glyph_array.firstIndex(where: { $0 == String(g) })
+            glyph_nums.append(idx+1)
         }
-        
         return glyph_nums
     }
     
@@ -98,6 +101,9 @@ class Glyph: NSObject {
         }
         else if gate == "Old Pegasus"{
             font_glyph = pegasusV1[number-1]
+        }
+        else if gate == "Old Destiny"{
+            font_glyph = destinyV1[number-1]
         }
         else if gate == "Destiny"{
             font_glyph = destinyV2[number-1]

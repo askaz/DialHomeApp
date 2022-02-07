@@ -12,7 +12,7 @@ struct iPhoneDHD: View {
     var compress_hor = 2.5
     var body: some View {
         ZStack{
-            Color.brown.ignoresSafeArea() // 1
+            Color.brown // 1
         VStack{
             HStack{
                 VStack{

@@ -21,11 +21,11 @@ struct MilkyWay_Database: View {
                 //AutoDial
             }){
             VStack(alignment: .leading){
-                Text(mw_glyph.address_to_glyphs(add_array: address.symbols, galaxy: "Milky Way")).font(Font.custom("Stargate SG-1 Address Glyphs", size: 32))
-                Text(address.name).font(addr_font)
+                Text(mw_glyph.address_to_glyphs(add_array: address.symbols, galaxy: "Milky Way")).font(Font.custom("Stargate SG-1 Address Glyphs", size: 32)).foregroundColor(.textColor)
+                Text(address.name).font(addr_font).foregroundColor(.textColor)
                     if addr_info{
                         if address.more_info != "N/A"{
-                            Text(address.more_info).font(info_font)//.subheadline)
+                            Text(address.more_info).font(info_font).foregroundColor(.textColor)//.subheadline)
                         }
                     }
             }.foregroundColor(.black) //Button
