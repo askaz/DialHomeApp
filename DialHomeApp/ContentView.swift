@@ -4,35 +4,22 @@ import Combine
 import AVFoundation
 var player: AVAudioPlayer?
 
+
 struct ContentView: View {
     @EnvironmentObject var dial: Dialing
+    @EnvironmentObject var set: Settings
     var body: some View {
+        var gate = set.gateSystem
         TabView {
-            //if dial.gateSystem == 1{
-            MilkyWay_Database(addresses: MilkyWay_Addresses)
+            
+            getDestination(gate: gate)
+            //MilkyWay_Database(addresses: MilkyWay_Addresses)
                 .tabItem {
                 Image(systemName: "text.book.closed.fill")
-                Text("Database")}
-            //} if dial.gateSystem == 1
-//            }
-//            if dial.gateSystem == 0 {
-//                MilkyWay_Database(addresses: MilkyWay_Addresses)
-//                    .tabItem {
-//                    Image(systemName: "text.book.closed.fill")
-//                    Text("Database")}
-//            }
-//            else if dial.gateSystem == 1{
-//                Pegasus_Database(addresses: Pegasus_Addresses)
-//                    .tabItem {
-//                    Image(systemName: "text.book.closed.fill")
-//                    Text("Database")}
-//            }
-//            else if dial.gateSystem == 2{
-//                Destiny_Database(addresses: Destiny_Addresses)
-//                    .tabItem {
-//                    Image(systemName: "text.book.closed.fill")
-//                    Text("Database")}
-//            }
+                    Text("Database "+String(set.gateSystem))
+                
+                    
+                }
             //DatabaseList() // Navigation View
 
             //PegJumperDHD().environmentObject(Dialing())
@@ -48,13 +35,25 @@ struct ContentView: View {
                 Text("DHD")
               }
             
-            SettingsView().environmentObject(Dialing())
+            SettingsView().environmentObject(Dialing()).environmentObject(Settings())
                 .tabItem{
                 Image(systemName: "gearshape")
                 Text("Settings")
                 }
-        }.edgesIgnoringSafeArea(.bottom) // Tab View
+        }.edgesIgnoringSafeArea(.bottom)
+        //.onChange(of: set.gateSystem, perform: print(String(set.gateSystem)))// Tab View
     } //Body View
+    func getDestination(gate: Int) -> AnyView
+      {
+          if gate == 2 {
+              return AnyView(Pegasus_Database(addresses: Pegasus_Addresses))
+          }
+          else if gate == 1{
+                  return AnyView(Destiny_Database(addresses: Destiny_Addresses))
+          } else {
+              return AnyView(MilkyWay_Database(addresses: MilkyWay_Addresses))
+          }
+      }
 } //Content View
 
 struct ContentView_Previews: PreviewProvider {
@@ -333,7 +332,25 @@ public class Dialing: ObservableObject {
     @Published public var pressed_symbols = Array(repeating: false, count: 40)
     @Published public var address = [Int]()
     @Published public var active = false
-    @Published public var gateSystem = 0
+    @Published public var gateSystem = Int()
+}
+
+public class Settings: ObservableObject {
+    //var didChange = PassthroughSubject<void, never="">()
+   @Published var gateSystem: Int = 0
+//    {
+//        willSet {
+//            //print("Favorite Food Choice will be \(newValue)")
+//            //didChange.send()
+//            //print("Favorite Food Choice: \(gateSystem)") // never changes when I select a different food.
+//        }
+//        didSet {
+//            //print("Favorite Food Choice was \(oldValue)")
+//            //didChange.send()
+//            print("Gate System:  \(gateSystem)") // never changes when I select a different food.
+//        }
+//    }
+
 }
 
 struct DatabaseList: View {

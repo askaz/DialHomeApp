@@ -12,6 +12,7 @@ class Glyph: NSObject {
     var constellation: String?
     var number: Int?
     var text: String?
+    var gateSystem: Int?
     
     func address_to_glyphs(add_array: [Int], galaxy:String) -> String{
         var translated_address = ""

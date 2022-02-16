@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var set: Settings
     @EnvironmentObject var dial: Dialing
  
     var body: some View {
         VStack{
-        Picker("What is your favorite color?", selection: $dial.gateSystem) {
+            Picker("Choose Gate System", selection: $set.gateSystem){//$dial.gateSystem) {
                         Text("Milky Way").tag(0)
                         Text("Pegasus ").tag(1)
                         Text("Universe").tag(2)
-                    }
-                    .pickerStyle(.segmented)
+        }.onChange(of: set.gateSystem) { _ in
+            print(set.gateSystem)
+            dial.gateSystem = set.gateSystem
+            print(dial.gateSystem)
+           
+        }.pickerStyle(.segmented)
         }
 }
 }

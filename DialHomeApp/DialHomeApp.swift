@@ -11,7 +11,7 @@ import SwiftUI
 struct DialHomeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(Dialing()).environmentObject(Settings())
         }
     }
 }
