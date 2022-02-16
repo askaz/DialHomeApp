@@ -8,12 +8,33 @@ struct ContentView: View {
     @EnvironmentObject var dial: Dialing
     var body: some View {
         TabView {
+            //if dial.gateSystem == 1{
             MilkyWay_Database(addresses: MilkyWay_Addresses)
-            //DatabaseList() // Navigation View
-             .tabItem {
+                .tabItem {
                 Image(systemName: "text.book.closed.fill")
-                Text("Database")
-              }
+                Text("Database")}
+            //} if dial.gateSystem == 1
+//            }
+//            if dial.gateSystem == 0 {
+//                MilkyWay_Database(addresses: MilkyWay_Addresses)
+//                    .tabItem {
+//                    Image(systemName: "text.book.closed.fill")
+//                    Text("Database")}
+//            }
+//            else if dial.gateSystem == 1{
+//                Pegasus_Database(addresses: Pegasus_Addresses)
+//                    .tabItem {
+//                    Image(systemName: "text.book.closed.fill")
+//                    Text("Database")}
+//            }
+//            else if dial.gateSystem == 2{
+//                Destiny_Database(addresses: Destiny_Addresses)
+//                    .tabItem {
+//                    Image(systemName: "text.book.closed.fill")
+//                    Text("Database")}
+//            }
+            //DatabaseList() // Navigation View
+
             //PegJumperDHD().environmentObject(Dialing())
             //AtlantisDHD().environmentObject(Dialing())
             iPhoneDHD().environmentObject(Dialing())
@@ -312,6 +333,7 @@ public class Dialing: ObservableObject {
     @Published public var pressed_symbols = Array(repeating: false, count: 40)
     @Published public var address = [Int]()
     @Published public var active = false
+    @Published public var gateSystem = 0
 }
 
 struct DatabaseList: View {
